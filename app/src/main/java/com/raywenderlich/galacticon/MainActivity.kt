@@ -25,8 +25,12 @@ package com.raywenderlich.galacticon
 import android.os.Bundle
 import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import kotlinx.android.synthetic.main.activity_main.*
 import java.io.IOException
 import java.util.*
+
+private lateinit var linearLayoutManager: LinearLayoutManager
 
 class MainActivity : AppCompatActivity(), ImageRequester.ImageRequesterResponse {
 
@@ -42,6 +46,8 @@ class MainActivity : AppCompatActivity(), ImageRequester.ImageRequesterResponse 
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_main)
 
+    linearLayoutManager = LinearLayoutManager(this)
+    recyclerView.layoutManager = linearLayoutManager
     imageRequester = ImageRequester(this)
   }
 
