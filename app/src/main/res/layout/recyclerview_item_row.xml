@@ -7,10 +7,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-
-
-    Add the following XML elements as children of the ConstraintLayout:
-
     <ImageView
         android:id="@+id/itemImage"
         android:layout_width="0dp"
